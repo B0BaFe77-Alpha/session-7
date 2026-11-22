@@ -1,14 +1,14 @@
 import unittest
 from coffee_shop_exceptions import InsufficientPointsError, InvalidCustomerError, InvalidOrderError, InvalidSaveError,  InvalidSalesError
-from coffee_shop_refactored import Menu, Order, menuItem, Customer, loyaltyRewards
+from coffee_shop_refactored import Menu, Order, MenuItem, Customer, LoyaltyProgram
 
 class TestCoffeeShop(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures."""
-        self.latte = menuItem("Latte", 4.50)
+        self.latte = MenuItem("Latte", 4.50)
         self.customer = Customer("Alice", member=True, staff=False)
-        self.loyalty = loyaltyRewards(0, False)
+        self.loyalty = LoyaltyProgram(0, False)
 
     def test_menu_item_pricing_small(self):
         """Test Menu calculates small drink price correctly."""
@@ -132,7 +132,7 @@ class TestCoffeeShop(unittest.TestCase):
                 
         Order.daily_report()
     def test_insufficient_points(self):
-        loyalty = loyaltyRewards(50, False)
+        loyalty = LoyaltyProgram(50, False)
 
         with self.assertRaises(InsufficientPointsError):
             loyalty.spend_points()
