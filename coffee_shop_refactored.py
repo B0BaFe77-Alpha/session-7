@@ -331,14 +331,14 @@ class Order:
 
 menu = Menu()
 menu.add_drink(Drink('flat white', 4.00))
-customer = Customer("Asher", True, False)
-loyalty = LoyaltyProgram(50, False)
+# customer = Customer("Asher", True, False)
+# loyalty = LoyaltyProgram(50, False)
 
-customerOrder = [("latte", "small", "cow")]
+# customerOrder = [("latte", "small", "cow")]
 
-order = Order(customerOrder, customer, loyalty, menu)
-order.reciept()
-Order.daily_report()
+# order = Order(customerOrder, customer, loyalty, menu)
+# order.reciept()
+# Order.daily_report()
 
 
 

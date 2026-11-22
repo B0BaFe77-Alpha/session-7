@@ -22,3 +22,4 @@ Orders: 5, Sales: $19.74
 Orders: 1, Sales: $4.05
 Orders: 1, Sales: $4.05
 Orders: 1, Sales: $4.05
+Orders: 1, Sales: $4.05
